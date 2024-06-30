@@ -7,7 +7,7 @@ Desenvolvido com o framework Django
 
 # Instalação 
 1. Python 3.x
-2. $ pip install -r requirements.txt
+2. $pip install -r requirements.txt
 
 
 # Clonando o repositório
