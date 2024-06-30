@@ -11,7 +11,7 @@ Desenvolvido com o framework Django
 
 
 # Clonando o repositório
-1. $git clone 
+1. $git clone https://github.com/Chicapa3/PortalDeNoticias1.git
 2. $cd PortalDeNoticias1
 3. $python manage.py migrate
 4. $python manage.py makemigrations
