@@ -1,0 +1,715 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.4 linear;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home{
+background-image: url(Imagens/fundo9.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+/*Formulário de pesquisa  de artigos por categorias e palavras-chave termina qui.*/
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-form input,
+.search-form select,
+.search-form button {
+  
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc; /* Adiciona borda */
+    border-radius: 4px; /* Adiciona bordas arredondadas */
+}
+
+.search-form button {
+    cursor: pointer;
+    background-color: #ffbb00; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: 2px solid #edf2f6; /* Borda do botão */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.MenuItem{
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    gap: 10px;
+}
+
+.home h1{
+    color: #fff;
+    background-color: #ff9d00b8; /*cor de fundo do botão*/
+    border: 0px solid #edf2f6;
+    margin: 0px;
+    padding: 0px;
+    min-width: 100vw;
+    height: 110px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.home .Link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid #fff;
+    min-width: 100vw;
+}
+
+.Link a{
+    margin: 0 1rem;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.Link a:hover{
+    background-color: #ff9d00b8;
+    background-size: 50px;
+    padding-bottom: 1.5rem;
+}
+
+.Link ul{
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.Link li{
+    display: inline-block;
+    margin-right: 20px; /* Adiciona espaço entre os itens*/
+}
+
+div .MenuItem{
+    display: grid;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 5px;
+}
+
+div .MenuItem h2{
+    text-align: center;
+    margin: 10px;
+}
+
+.grid-container {
+    display: grid;
+    text-align: center;
+    /* torna o contêiner um flex container */
+    justify-content: space-between;
+    grid-gap: 0px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-container img{
+    width: 450px;
+    height: 90%;
+}
+
+.Menu .MenuItem p{
+    text-align: justify;
+    margin: 5px;
+    padding: 5px;
+}
+.Menu .MenuItem {
+    position: relative;
+    overflow: hidden;
+}
+.Menu .MenuItem .zoom-img{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+.Menu .MenuItem:hover .zoom-img{
+    transform: scale(1.2); /*Ajusta a escala conforme necessário*/
+}
+
+
+
+
+/* Notícias de Última Hora */
+
+.ultimaHora{
+    background-image: url(Imagens/ultima\ hora.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: justify;*/
+    font-size: medium;
+}
+
+.ultimaHora video{
+    width: 900px;
+    height: 90%;
+}
+
+.ultimaHora img{
+    width: 900px;
+    height: 90%;
+}
+
+.ultimaHora .Link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid #fff;
+    min-width: 100vw;
+}
+
+.search-form{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-form input
+.search-form select
+.search-form button{
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-form button{
+    cursor: pointer;
+    background-color: #ffbb00;
+    color: white;
+    border: 2px solid #edf2f6;
+    transition: background-color 0.3s;
+}
+
+.ultimaHora h1{
+    text-align: center;
+    color: #fff;
+    font-size: x-large;
+    padding: 20px;
+    margin: 20px;
+}
+.ultimaHora .Item-Menu li{
+    list-style: none;
+    padding: 20px;
+    text-align: justify;
+}
+
+div .Item-Menu{
+    display: grid;
+    padding: 0px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto;
+    min-width: 100%;
+}
+
+.grid-container h2{
+    font-size: xx-large;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+.grid-container p{
+    font-size: large;
+    text-align: justify;
+    margin: 10px;
+}
+
+.separador{
+    border: none;
+    height: 4px;
+    width: 100%;
+    margin: 20px 0;
+    background: linear-gradient(to right, #000, #494747);
+    font-size: xx-large;
+}
+
+.post p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.interactions {
+    margin-bottom: 20px;
+}
+
+.post button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.post button:hover {
+    background-color: #0056b3;
+}
+
+.post button:focus {
+    outline: none;
+}
+
+.comentario {
+    display: none;
+    margin-top: 20px;
+}
+
+.comentario textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.comentario button {
+    background-color: #28a745;
+}
+
+.comentario button:hover {
+    background-color: #218838;
+}
+
+#comentarios {
+    margin-top: 20px;
+}
+
+.comentario-item {
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+/*div 2*/
+.comentario2 {
+    display: none;
+    margin-top: 20px;
+}
+.comentario2 textarea{
+    width: calc(100%-22px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-size: 14px;
+    resize: vertical;
+    width: 50%;
+}
+.comentario2 button{
+    background-color: #28a745;
+}
+.comentario2 button:hover{
+    background-color: #218838;
+}
+#comentarios2{
+    margin-top: 20px;
+}
+#comentario2-item{
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+
+/*div 3*/
+.comentario3 {
+    display: none;
+    margin-top: 20px;
+}
+.comentario3 textarea{
+    width: calc(100%-22px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-size: 14px;
+    resize: vertical;
+    width: 50%;
+}
+.comentario3 button{
+    background-color: #28a745;
+}
+.comentario3 button:hover{
+    background-color: #218838;
+}
+#comentarios3{
+    margin-top: 20px;
+}
+#comentario3-item{
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/*div 4*/
+.comentario4 {
+    display: none;
+    margin-top: 20px;
+}
+.comentario4 textarea{
+    width: calc(100%-22px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-size: 14px;
+    resize: vertical;
+    width: 50%;
+}
+.comentario4 button{
+    background-color: #28a745;
+}
+.comentario4 button:hover{
+    background-color: #218838;
+}
+#comentarios4{
+    margin-top: 20px;
+}
+#comentario4-item{
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+
+#conteudo-completo {
+    display: none;
+}
+
+/*notícia 2*/
+#conteudo-completo2 {
+    display: none;
+}
+
+
+
+
+
+/*Esportes*/
+.Esportes{
+    background-image: url(Imagens/ultima\ hora.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: justify;*/
+    font-size: medium;
+}
+
+.Esportes .Link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid #fff;
+    min-width: 100vw;
+}
+
+.Esportes video{
+    width: 900px;
+    height: 90%;
+}
+
+.Esportes img{
+    width: 900px;
+    height: 90%;
+}
+
+.Esportes h1{
+    text-align: center;
+    color: #fff;
+    font-size: x-large;
+    padding: 20px;
+    margin: 20px;
+}
+
+.Esportes h1{
+    text-align: center;
+    color: #fff;
+    font-size: x-large;
+    padding: 20px;
+    margin: 20px;
+}
+.Esportes .Item-Menu li{
+    list-style: none;
+    padding: 20px;
+    text-align: justify;
+}
+
+
+
+/*Educacao*/
+.Educacao{
+    background-image: url(Imagens/ultima\ hora.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: justify;*/
+    font-size: medium;
+}
+
+.Educacao .Link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid #fff;
+    min-width: 100vw;
+}
+
+.Educacao video{
+    width: 900px;
+    height: 90%;
+}
+
+.Educacao img{
+    width: 900px;
+    height: 90%;
+}
+
+.Educacao h1{
+    text-align: center;
+    color: #fff;
+    font-size: x-large;
+    padding: 20px;
+    margin: 20px;
+}
+
+.Educacao h1{
+    text-align: center;
+    color: #fff;
+    font-size: x-large;
+    padding: 20px;
+    margin: 20px;
+}
+.Educacao .Item-Menu li{
+    list-style: none;
+    padding: 20px;
+    text-align: justify;
+}
+
+
+
+/*Ciência e Saúde*/
+.cienciaSaude{
+    background-image: url(Imagens/ultima\ hora.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: justify;*/
+    font-size: medium;
+}
+
+.cienciaSaude .Link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid #fff;
+    min-width: 100vw;
+}
+
+.cienciaSaude video{
+    width: 900px;
+    height: 90%;
+}
+
+.cienciaSaude img{
+    width: 900px;
+    height: 90%;
+}
+
+.cienciaSaude h1{
+    text-align: center;
+    color: #fff;
+    font-size: x-large;
+    padding: 20px;
+    margin: 20px;
+}
+
+.cienciaSaude h1{
+    text-align: center;
+    color: #fff;
+    font-size: x-large;
+    padding: 20px;
+    margin: 20px;
+}
+.cienciaSaude .Item-Menu li{
+    list-style: none;
+    padding: 20px;
+    text-align: justify;
+}
+
+
+
+
+/*Tecnologia*/
+.Tecnologia{
+    background-image: url(Imagens/ultima\ hora.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: justify;*/
+    font-size: medium;
+}
+
+.Tecnologia .Link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid #fff;
+    min-width: 100vw;
+}
+
+.Tecnologia video{
+    width: 900px;
+    height: 90%;
+}
+
+.Tecnologia img{
+    width: 900px;
+    height: 90%;
+}
+
+.Tecnologia h1{
+    text-align: center;
+    color: #fff;
+    font-size: x-large;
+    padding: 20px;
+    margin: 20px;
+}
+
+.Tecnologia h1{
+    text-align: center;
+    color: #fff;
+    font-size: x-large;
+    padding: 20px;
+    margin: 20px;
+}
+.Tecnologia .Item-Menu li{
+    list-style: none;
+    padding: 20px;
+    text-align: justify;
+}
+
+
+
+
+
+/*Entretenimento*/
+.Entretenimento{
+    background-image: url(Imagens/ultima\ hora.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: justify;*/
+    font-size: medium;
+}
+
+.Entretenimento .Link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid #fff;
+    min-width: 100vw;
+}
+
+.Entretenimento video{
+    width: 900px;
+    height: 90%;
+}
+
+.Entretenimento img{
+    width: 900px;
+    height: 90%;
+}
+
+.Entretenimento h1{
+    text-align: center;
+    color: #fff;
+    font-size: x-large;
+    padding: 20px;
+    margin: 20px;
+}
+
+.Entretenimento h1{
+    text-align: center;
+    color: #fff;
+    font-size: x-large;
+    padding: 20px;
+    margin: 20px;
+}
+.Entretenimento .Item-Menu li{
+    list-style: none;
+    padding: 20px;
+    text-align: justify;
+}
+
+
+
+
+
+
+#like img{
+    width: 25px;
+    height: 25px;
+}
+
+#like{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 1.1rem;
+    color: black;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+
+
+
+/* Ver mais; Ver menos */
+
+
+
+

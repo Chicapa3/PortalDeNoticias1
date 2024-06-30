@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Style.css' %}">
+    <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet"> 
+
+    <!-- CSS Libraries -->
+    <!-- CSS do Bootstrap (coloque o link correto para sua versão do Bootstrap) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS do Font Awesome para o ícone de coração -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'lib/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'lib/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <title>{{ artigo.titulo }} - Portal de Notícias</title>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="tb-contact">
+                        <p><i class="fas fa-envelope"></i>chicapaalbertina07@mail.com</p>
+                        <p><i class="fas fa-phone-alt"></i>+244 939 933 360</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="tb-menu">
+                        <a href="#">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+
+    <!-- Brand Start -->
+    <div class="brand">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-4">
+                    <div class="b-logo">
+                        <a href="{% url 'index-page' %}">
+                            <img src="{% static 'img/logo.png' %}" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Brand End -->
+
+    <!-- Nav Bar Start -->
+    <div class="nav-bar">
+        <div class="container">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <a href="#" class="navbar-brand">MENU</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto">
+                        <a href="{% url 'index-page' %}" class="nav-item nav-link active">Início</a>
+                    </div>
+                    <div class="social ml-auto">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+
+    <!-- Artigo Detalhe Start -->
+     <br>
+    <div class="container">
+        <h1>{{ artigo.titulo }}</h1>
+        {% if artigo.imagem %}
+        <img src="{{ artigo.imagem.url }}" alt="{{ artigo.titulo }}">
+        {% endif %}
+
+        <p>Por {{ artigo.nome_autor }} em {{ artigo.data }}</p>
+        <p>{{ artigo.conteudo }}</p>
+    
+        <!--p>Visualizações: {{ artigo.visualizacoes }}</p-->
+
+        <div class="container mt-5">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 text-center"> <!-- Adicionando a classe "text-center" para alinhar ao centro -->
+                <button id="likeButton" type="button" class="btn btn-outline-primary">
+                  <i id="heartIcon" class="fas fa-heart"></i> <span id="likeText">Like</span>
+                </button>
+                <p id="userInfo"></p>
+              </div>
+            </div>
+          </div>
+
+        <h2>Comentários</h2>
+        {% for comentario in comentarios %}
+        <div>
+            <p><strong>{{ comentario.nome }}</strong> em {{ comentario.data_criacao }}</p>
+            <p>{{ comentario.corpo }}</p>
+        </div>
+        {% endfor %}
+
+        {% if novo_comentario %}
+        <p>Seu comentário foi enviado com sucesso!</p>
+        {% else %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-custom">Enviar</button>
+        </form>
+        <br> <br>
+        {% endif %}
+    </div>
+    <!-- Artigo Detalhe End -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/slick/slick.min.js' %}"></script>
+    <!-- JavaScript do Bootstrap (opcional, apenas se você precisar de funcionalidades avançadas de componentes) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript para manipular o toggle do like -->
+
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const extraContent = document.getElementById('extraContent');
+
+        toggleButton.addEventListener('click', function() {
+            if (extraContent.style.display === 'none') {
+                extraContent.style.display = 'block';
+                toggleButton.textContent = 'Ver Menos';
+            } else {
+                extraContent.style.display = 'none';
+                toggleButton.textContent = 'Ver Mais';
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var likeButton = document.getElementById('likeButton');
+          var heartIcon = document.getElementById('heartIcon');
+          var likeText = document.getElementById('likeText');
+          var userInfo = document.getElementById('userInfo');
+          var isLiked = false;
+      
+          // Sistema de autenticação
+          var userId = localStorage.getItem('userId');
+          if (!userId) {
+            userId = prompt('Digite seu nome para login');
+            if (!userId) {
+          alert('Por favor, preencha o nome para continuar.');
+        }
+      } while (!userId);
+      localStorage.setItem('userId', userId);
+      
+          userInfo.textContent = 'Usuário: ' + userId;
+      
+          likeButton.addEventListener('click', function() {
+            if (!isLiked) {
+              heartIcon.classList.add('text-danger'); // Adiciona a cor vermelha ao ícone de coração
+              likeText.textContent = 'Liked'; // Altera o texto do botão para "Liked"
+              isLiked = true; // Define o estado para "liked"
+              alert('O usuário ' + userId + ' curtiu!');
+
+               // Limpar o localStorage ao encerrar a sessão
+        localStorage.removeItem('userId');
+        userInfo.textContent = ''; // Limpa o texto exibido do usuário
+        
+            } else {
+              heartIcon.classList.remove('text-danger'); // Remove a cor vermelha do ícone de coração
+              likeText.textContent = 'Like'; // Altera o texto do botão para "Like"
+              isLiked = false; // Define o estado para "not liked"
+              alert('O usuário ' + userId + ' removeu o like.');
+            }
+          });
+        });
+      </script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
